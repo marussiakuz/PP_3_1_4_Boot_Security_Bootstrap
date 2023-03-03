@@ -69,7 +69,7 @@
                                 <th scope="col">Delete</th>
                             </tr>
                             </thead>
-                            <tbody id="mainTable" style="vertical-align: baseline; border-style: none;">
+                            <tbody id="mainTable" style="border-color: transparent;border-top: transparent;border-style: solid;">
                             <tr th:id="${user.getId()}" th:each="user : ${users}">
                                 <td th:id="'id_' + ${user.getId()}" th:text="${user.getId()}"></td>
                                 <td th:id="'name_' + ${user.getId()}" th:text="${user.getFirstName()}"></td>
@@ -77,7 +77,7 @@
                                 <td th:id="'age_' + ${user.getId()}" th:text="${user.getAge()}"></td>
                                 <td th:id="'email_' + ${user.getId()}" th:text="${user.getEmail()}"></td>
                                 <td th:id="'roles_' + ${user.getId()}" th:text="${user.getRoles()}"></td>
-                                <td><button th:id="'edit_' + ${user.getId()}" type="button" class="btn btn-info btn-sm edit-button modal-open">Edit</button></td>
+                                <td><button th:id="'edit_' + ${user.getId()}" type="button" class="btn btn-info btn-sm edit-button modal-open" style="color: whitesmoke">Edit</button></td>
                                 <td><button th:id="'delete_' + ${user.getId()}" type="button" class="btn btn-danger btn-sm delete-button modal-open">Delete</button></td>
                             </tr>
                             </tbody>

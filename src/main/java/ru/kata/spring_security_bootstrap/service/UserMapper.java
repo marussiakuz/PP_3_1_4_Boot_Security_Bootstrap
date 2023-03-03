@@ -49,6 +49,7 @@ public abstract class UserMapper {
         return isNull(roles) ? null : roles.stream()
                 .map(Role::getName)
                 .map(name -> name.replace("ROLE_", ""))
+                .sorted()
                 .collect(Collectors.joining(" "));
     }
 }
